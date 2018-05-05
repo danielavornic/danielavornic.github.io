@@ -1,0 +1,135 @@
+/* fonts */
+@font-face {
+    font-family: 'Aileron';
+    src: url('../fonts/Aileron-Black.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Icons';
+    src: url('../fonts/icons.ttf') format('truetype');
+}
+
+/* general stuff like grid */
+
+.grid-y {
+    padding-left: 5%;
+    padding-right:  5%; 
+}
+
+header {
+    height: 775px;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav ul li {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    line-height: 2.5;
+    text-align: right;
+    color: #ffffff;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+nav li a {
+    color: #ffffff;
+    transition: color 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+}
+
+h1, h2 {
+    color: #ededed;
+    font-family: 'Aileron', sans-serif;
+    line-height: 1.33;
+}
+
+h1 {
+    font-size: 48px
+}
+
+h2 {
+    font-size: 32px
+}
+
+nav ul {
+    list-style-type: none;
+    float: right;
+    margin-top: 1%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* other */
+.nav {
+    padding-left: -10px !important;
+    padding-right: 0px !important;
+}
+
+#nav-arrow svg {
+    width: 60px;
+    cursor: pointer;
+    margin-left: -25px !important;
+}
+
+/* media queries */
+@media screen and (min-width: 1024px) {
+    .illustration {
+        float: right;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    nav li a span {
+        display:none
+    }
+
+    nav li a:after {
+        font-family: 'Icons';
+        font-size: 24px;
+    }
+
+    li:nth-of-type(1) a:after {
+        content: '1';
+    }
+
+    li:nth-of-type(2) a:after {
+        content: '2';
+    }
+
+    li:nth-of-type(3) a:after {
+        content: '3';
+    }
+
+    li:nth-of-type(4) a:after {
+        content: '4';
+    }
+
+    nav ul {
+        margin-top: 0
+    }
+
+    nav ul li {
+        padding-left: 20px
+    }
+
+    #header-content .large-5 {
+        margin-bottom: -150px;
+        margin-top: -30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
