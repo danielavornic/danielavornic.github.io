@@ -13,11 +13,8 @@
 
 body {
     overflow-x : hidden;
-}
-
-.grid-y header, .grid-x {
-    padding-left: 5%;
-    padding-right:  5%; 
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -59,6 +56,14 @@ p {
     font-size: 18px;
 }
 
+p a {
+    color: #3dbaba
+}
+
+p a:hover {
+    color: #2f9797
+}
+
 h1 {
     font-size: 48px
 }
@@ -83,7 +88,7 @@ button:focus {
     outline: none;
 }
 
-.btn-gr {
+button {
     width: 224px;
     height: 56px;
     cursor: pointer;
@@ -91,9 +96,12 @@ button:focus {
     color: white;
     font-family: 'Nunito Sans', sans-serif;
     letter-spacing: 0.5px;
-    border-radius: 8px;
+}
+
+.btn-gr {
     background-image: linear-gradient(to right, #2a055e, #4f1a99 32%, #755c9c 72%, #ffa3a3);
     box-shadow: 0.7px 3.9px 8px 0 rgba(80, 103, 179, 0.5);
+     border-radius: 8px;
 }
 
 .btn-gr:hover{
@@ -101,7 +109,31 @@ button:focus {
     background-image: -webkit-linear-gradient( 180deg, rgb(61, 186, 186) 0%, rgb(75, 133, 175) 35%, rgb(89, 79, 163) 100%);
     background-image: -ms-linear-gradient( 180deg, rgb(61, 186, 186) 0%, rgb(75, 133, 175) 35%, rgb(89, 79, 163) 100%);
     box-shadow: 0.695px 3.939px 8px 0px rgba(80, 103, 179, 0.5);
-    -webkit-animation: opacity 0.8s cubic-bezier(0.65, 0.05, 0.36, 1)
+    -webkit-animation: opacity 0.8s cubic-bezier(0.65, 0.05, 0.36, 1);
+    font-weight: bold;
+}
+
+.btn-gr:active {
+    background-image: linear-gradient(to right, #3a3172, #f3bbb7);
+    box-shadow: 0.7px 3.9px 8px 0 rgba(80, 103, 179, 0.5);
+}
+
+.btn-purple {
+    background-color: #3a3172;
+     border-radius: 8px;
+}
+
+.btn-purple:hover {
+    background-color: transparent;
+    border: solid 2px #3d3d3f;
+    color: #3d3d3f;
+    font-weight: bold;
+}
+
+.btn-purple:active {
+    background-color: #3dbaba;
+    border: none;
+    color: white
 }
 
 @-webkit-keyframes opacity {
@@ -188,5 +220,13 @@ button:focus {
 
     h2 {
         font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    button.btn-gr, button.btn-purple {
+        width: 144px;
+        height: 40px;
+        font-size: 14px;
     }
 }

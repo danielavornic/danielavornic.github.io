@@ -19,8 +19,13 @@ sr.reveal('#about img', {
 });
 sr.reveal('#about div:nth-of-type(2)', {
     origin: 'right',
+    duration: 1500  
+});
+sr.reveal('#work div.small-4', {
     duration: 1500
-    
+});
+sr.reveal('#work div.small-8', {
+    duration: 1500
 });
 
 new TypeIt('.typed', {
