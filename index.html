@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="EN">
 
 <head>
     <title>Daniela Vornic - web developer and designer</title>
@@ -19,7 +19,7 @@
 <body>
     <div class="grid-container full">
 
-        <header class="grid-y grid-padding-y">
+        <header class="grid-y grid-padding-y" id="header">
             <nav class="cell grid-x grid-padding-x small-2">
                 <div class="cell small-1 left" id="nav-arrow">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="60px" viewBox="0 0 96 96">
@@ -120,10 +120,24 @@
             </div>
         </div>
 
-</body>
+        <footer class="grid-y grid-container full">
+            <div class="cell small-10">
+                <h1>Not conviced yet?</h1>
+                <button onclick="location.href='#'" type="button" class="btn-purple">Explore more</button>
+                <a href="#header"><img src="images/footer-wheel-gif.gif" alt="wheel"></a>
+            </div>
+            <div class="cell small-2">
+                <p>&copy; Made with  &#10084; by Daniela Vornic</p>
+            </div>
+        </footer>
 
-<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/5.10.0/typeit.min.js"></script>
-<script src="js/global.js"></script>                          
+    </div>
+
+    <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/5.10.0/typeit.min.js"></script>
+    <script src="js/global.js"></script>
+
+</body>                        
 
 </html>

@@ -34,3 +34,16 @@ new TypeIt('.typed', {
     cursor: false,
     loop: true
 });
+
+$('a[href^="#"]').on('click', function (e) {
+    e.preventDefault();
+
+    var target = this.hash;
+    var $target = $(target);
+
+    $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+    }, 950, 'swing', function () {
+        window.location.hash = target;
+    });
+});
