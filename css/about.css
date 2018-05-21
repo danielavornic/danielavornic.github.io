@@ -1,0 +1,19 @@
+header {
+    background: url("../images/header-about-bg.png");
+}
+
+li a:hover, li a.active {
+    color: #3a3172;
+}
+
+.illustration {
+    width: 280px;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        background: url("../images/header-about-bg-tablet.png");
+        height: 1050px;
+    }    
+}

@@ -6,7 +6,7 @@ li a:hover, li a.active {
     color: #ffa3a3;
 }
 
-header, #about, #work, footer  div{
+header, #about, #work, footer  div {
     padding-left: 5%;
     padding-right: 5%; 
 }
@@ -28,7 +28,7 @@ figure {
 }
 
 .illustration {
-    width: 410px;
+    width: 420px;
     vertical-align: middle;
 }
 
@@ -50,6 +50,7 @@ figure {
     vertical-align: middle;
     width: 400px;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 #about button {

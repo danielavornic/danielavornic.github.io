@@ -17,6 +17,11 @@ body {
     padding: 0;
 }
 
+header, footer div {
+    padding-left: 5%;
+    padding-right: 5%; 
+}
+
 header {
     height: 775px;
     width: 100%;
