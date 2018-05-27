@@ -27,6 +27,14 @@ sr.reveal('#work div.small-4', {
 sr.reveal('#work div.small-8', {
     duration: 1500
 });
+sr.reveal('.info-me', {
+    origin: 'right',
+    duration: 1500
+});
+sr.reveal('.img-me img', {
+    origin: 'left',
+    duration: 1500
+});
 
 new TypeIt('.typed', {
     strings: 'This is my string!',
