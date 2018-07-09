@@ -11,14 +11,14 @@ li a:hover, li a.active {
     vertical-align: middle;
 }
 
-#bio {
+#bio, #skills {
     padding-left: 5%;
     padding-right: 5%; 
 }
 
 #bio {
     margin: 40px auto 104px auto;
-    padding-left: 10%
+    display: table;
 }
 
 .img-me img, .info-me {
@@ -29,45 +29,104 @@ li a:hover, li a.active {
 .info-me {
     width: 55% !important;
     background-color: #ededed;
-    position: absolute;
-    margin-left: 23%;
     cursor: pointer;
+    opacity: 0.85;
+    display: table-cell;
+}
+
+.img-me {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .img-me img {
-    width: 700px;
     cursor: pointer;
-    vertical-align: middle;
-    position: relative;
-    margin-top: 15%;
-}
-
-.img-me img:hover {
-    animation: move 1s linear;
-    z-index: 1
-}
-
-@keyframes move {
-  0% {
-      z-index: 0;
-      opacity: 1
-  }
-  50% {
-      z-index: 1;
-      opacity: 0.8
-  }
-  100% {
-      opacity: 1;
-      z-index: 2;
-  }
 }
 
 .info-me .text {
-    padding: 44px
+    padding: 44px;
+    margin-left: -20px
 }
 
 .info-me p {
     padding: 0;
+}
+
+.skills-list {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 20px;
+}
+
+.skill {
+    perspective: 600px;
+    width: 200px;
+    height: 200px;
+    opacity: 0.85;
+    margin-bottom: 60px;
+}
+
+.box-skill {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box-skill.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-skill {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #ededed;
+    box-shadow: 0px 4px 21px 0 rgba(58, 49, 114, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card-skill span {
+    font-family: Aileron;
+    font-size: 36px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 1.33;
+    color: #ffa3a3;
+}
+
+.back {
+    transform: rotateY( 180deg );
+    background-color: #dadada93;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+span.skill-font-small {
+    font-size: 28px
+}
+
+@media screen and (min-width: 1024px) {
+    .medium-skill, .small-skill {
+        display: none;
+    }
+    .large-skill {
+        display:block
+    }
+    .skill {
+        height: 240px
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -75,4 +134,75 @@ li a:hover, li a.active {
         background: url("../images/header-about-bg-tablet.png");
         height: 1050px;
     }    
+    .info-me {
+        margin: 0;
+        width: 90% !important;
+        margin: -30px auto;
+        z-index: 100;
+        display: block;
+    }
+    
+    .img-me img{
+        width: 60%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0
+    }
+    #bio {
+        padding:0;
+        display: block
+    }
+
+    .medium-skill, .small-skill {
+        display: none;
+    }
+    .large-skill {
+        display:block
+    }
+
+    .skills-list {
+        padding:0
+    }
+
+    .skill span {
+        font-size: 28px
+    }
+
+    span.skill-font-small {
+        font-size: 24px
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .skill span {
+        font-size: 24px;
+    }
+    .medium-skill {
+        display: block;
+    }
+    .large-skill, .small-skill {
+        display:none
+    }
+    .skill {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .skill span {
+        font-size: 24px;
+    }
+    .small-skill {
+        display: block;
+    }
+    .large-skill, .medium-skill  {
+        display:none
+    }
+    .skill {
+        margin-bottom: 40px;
+    }
+    .info-me .text {
+        padding: 20px
+    }
 }

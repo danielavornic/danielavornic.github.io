@@ -30,6 +30,24 @@ header {
     background-repeat: no-repeat;
 }
 
+
+.illustration {
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+
+		transform: translatey(-15px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
 nav ul li {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 16px;
@@ -141,7 +159,7 @@ button {
     color: white
 }
 
-@-webkit-keyframes opacity {
+@keyframes opacity {
     0% {
         opacity: 0.5;
     }

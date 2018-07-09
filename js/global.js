@@ -35,6 +35,12 @@ sr.reveal('.img-me img', {
     origin: 'left',
     duration: 1500
 });
+sr.reveal('#skills div.small-4', {
+    duration: 1500
+});
+sr.reveal('#skills div.small-8', {
+    duration: 1500
+});
 
 new TypeIt('.typed', {
     strings: 'This is my string!',
@@ -55,3 +61,8 @@ $('a[href^="#"]').on('click', function (e) {
         window.location.hash = target;
     });
 });
+
+var card = document.querySelectorAll('.box-skill');
+card.forEach(card => card.addEventListener('click', function() {
+    card.classList.toggle('is-flipped');
+}))
